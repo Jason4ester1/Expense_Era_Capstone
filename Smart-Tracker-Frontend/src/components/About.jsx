@@ -3,11 +3,13 @@ import Layout from './Layout'  // Ensure your Layout component is imported corre
 
 export default function About() {
   return (
-    <Layout>
+    <>
+
+
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold text-green-800 mb-6">About ExpenseTracker</h1>
+        <h1 className="text-3xl font-bold text-green-800 mb-6">About ExpenseEra</h1>
         <img
-          src="/placeholder.svg"
+          src="/muhyun.jpg"
           alt="Team working on finances"
           width={600}
           height={300}
@@ -23,6 +25,6 @@ export default function About() {
           With ExpenseTracker, you can say goodbye to financial stress and hello to a brighter, more secure financial future.
         </p>
       </div>
-    </Layout>
+</>
   )
 }

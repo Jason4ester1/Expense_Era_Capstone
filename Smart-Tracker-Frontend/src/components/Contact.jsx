@@ -1,13 +1,12 @@
 import React from 'react'
 import Layout from './Layout'  // Ensure correct import for Layout component
-// import { Button } from '@/components/ui/button'  // Make sure the path is correct for your project
-// import { Input } from '@/components/ui/input'    // Make sure the path is correct for your project
-// import { Textarea } from '@/components/ui/textarea' // Make sure the path is correct for your project
+import { Button, Input, Textarea } from '@nextui-org/react'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Contact() {
   return (
-    <Layout>
+    <>
+    
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold text-green-800 mb-6">Contact Us</h1>
         <div className="grid md:grid-cols-2 gap-8">
@@ -18,15 +17,15 @@ export default function Contact() {
             <div className="space-y-4">
               <div className="flex items-center text-green-700">
                 <Mail className="mr-2" />
-                <span>support@expensetracker.com</span>
+                <span>support@expenseera.com</span>
               </div>
               <div className="flex items-center text-green-700">
                 <Phone className="mr-2" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (877) 393-4448</span>
               </div>
               <div className="flex items-center text-green-700">
                 <MapPin className="mr-2" />
-                <span>123 Finance St, Money City, 12345</span>
+                <span>127 Financial Freedom Ave, Money City, 12345</span>
               </div>
             </div>
           </div>
@@ -41,6 +40,6 @@ export default function Contact() {
           </form>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }

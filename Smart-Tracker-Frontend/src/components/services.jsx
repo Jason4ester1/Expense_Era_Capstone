@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from './Layout' // Ensure Layout is correctly imported
 import { CheckCircle } from 'lucide-react'
 
+
 export default function Services() {
   const services = [
     "Expense Tracking",
@@ -17,7 +18,7 @@ export default function Services() {
   ]
 
   return (
-    <Layout>
+<>
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold text-green-800 mb-6">Our Services</h1>
         <p className="text-green-700 mb-8">
@@ -32,6 +33,7 @@ export default function Services() {
           ))}
         </div>
       </div>
-    </Layout>
+</>
+
   )
 }

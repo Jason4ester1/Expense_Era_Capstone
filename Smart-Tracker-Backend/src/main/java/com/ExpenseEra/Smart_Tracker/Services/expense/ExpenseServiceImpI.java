@@ -3,11 +3,13 @@ package com.ExpenseEra.Smart_Tracker.Services.expense;
 import com.ExpenseEra.Smart_Tracker.dto.ExpenseDTO;
 import com.ExpenseEra.Smart_Tracker.entity.Expense;
 import com.ExpenseEra.Smart_Tracker.repository.ExpenseRepository;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -30,10 +32,37 @@ public class ExpenseServiceImpI implements ExpenseService {
 
         return expenseRepository.save(expense);
     }
-public List<Expense> getAllExpense(){
-        return expenseRepository.findAll().stream()
-                .sorted(Comparator.comparing(Expense::getDate).reversed())
-                .collect(Collectors.toList());
 
+    public Expense updateExpanse(Long id, ExpenseDTO expenseDTO){
+        Optional<Expense>optionalExpense = expenseRepository.findById(id);
+        if(optionalExpense.isPresent()){
+            return saveOrUpdateExpanse(optionalExpense.get(), expenseDTO);
+        }else {
+            throw new EntityNotFoundException("Expense is not present with id" + id);
+        }
+    }
+public List<Expense> getAllExpense() {
+    return expenseRepository.findAll().stream()
+            .sorted(Comparator.comparing(Expense::getDate).reversed())
+            .collect(Collectors.toList());
+
+}
+public Expense getExpenseById(Long id ){
+        Optional<Expense> optionalExpense = expenseRepository.findById(id);
+        if(optionalExpense.isPresent()) {
+            return optionalExpense.get();
+        }else {
+            throw new EntityNotFoundException("Expense is not present with id" + id);
+        }
+}
+
+
+public void deleteExpense(Long id){
+        Optional<Expense>optionalExpense = expenseRepository.findById(id);
+        if (optionalExpense.isPresent()){
+            expenseRepository.deleteById(id);
+        }else {
+            throw new EntityNotFoundException("Expense is not present with id" + id);
+        }
 }
 }

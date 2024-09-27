@@ -4,6 +4,7 @@ package com.ExpenseEra.Smart_Tracker.controller;
 import com.ExpenseEra.Smart_Tracker.Services.expense.ExpenseService;
 import com.ExpenseEra.Smart_Tracker.dto.ExpenseDTO;
 import com.ExpenseEra.Smart_Tracker.entity.Expense;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,9 +26,5 @@ public class ExpenseController {
         }else {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
-    }
-@GetMapping("/all")
-    public ResponseEntity<?> getAllExpenses(){
-       return ResponseEntity.ok(expenseService.getAllExpense());
     }
 }
