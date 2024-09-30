@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Lock, Eye, EyeOff } from 'lucide-react'
-import { Button } from '@nextui-org/react'
-import Layout from './Layout'
+import { Button as NextUIButton } from '@nextui-org/react'
 
 const Input = ({ icon: Icon, ...props }) => (
   <div className="relative">
@@ -15,13 +13,14 @@ const Input = ({ icon: Icon, ...props }) => (
   </div>
 )
 
-const Button = ({ children, className, ...props }) => (
-  <button
-    className={`w-full px-4 py-2 text-white bg-green-600 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${className}`}
+// Rename your custom Button component to avoid conflict
+const CustomButton = ({ children, className, ...props }) => (
+  <NextUIButton
+    className={`w-full px-4 py-2 text-black bg-green-600 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${className}`}
     {...props}
   >
     {children}
-  </button>
+  </NextUIButton>
 )
 
 export default function Login() {
@@ -107,7 +106,7 @@ export default function Login() {
           </div>
 
           <div>
-            <Button type="submit">Sign in</Button>
+            <CustomButton type="submit">Sign in</CustomButton>
           </div>
         </form>
         <div className="text-center">

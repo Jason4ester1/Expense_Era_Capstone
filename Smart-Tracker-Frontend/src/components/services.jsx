@@ -20,15 +20,15 @@ export default function Services() {
   return (
 <>
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold text-green-800 mb-6">Our Services</h1>
-        <p className="text-green-700 mb-8">
+        <h1 className="text-3xl font-bold text-black mb-6">Our Services</h1>
+        <p className="text-black mb-8">
           ExpenseTracker offers a comprehensive suite of financial management tools to help you stay on top of your expenses and achieve your financial goals.
         </p>
         <div className="grid md:grid-cols-2 gap-4">
           {services.map((service, index) => (
-            <div key={index} className="flex items-center bg-white p-4 rounded-lg shadow-md">
+            <div key={index} className="flex items-center bg-green-100 p-4 rounded-lg shadow-md">
               <CheckCircle className="text-green-600 mr-2" />
-              <span className="text-green-800">{service}</span>
+              <span className="text-black">{service}</span>
             </div>
           ))}
         </div>

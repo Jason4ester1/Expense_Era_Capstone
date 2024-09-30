@@ -1,7 +1,7 @@
 package com.ExpenseEra.Smart_Tracker.Services.data;
 
-import com.example.smarttracker.model.Data;
-import com.example.smarttracker.repository.DataRepository;
+import com.ExpenseEra.Smart_Tracker.model.data;
+import com.ExpenseEra.Smart_Tracker.repository.DataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,3 +19,6 @@ public class DataServices {
 
     public Data createData(Data data) {
         return dataRepository.save(data);
+    }
+}
+    

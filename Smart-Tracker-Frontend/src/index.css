@@ -48,7 +48,7 @@ h3 {
 }
 
 a {
-    color: #0dbb50;
+    color: #021108;
     transition: color 0.3s;
 }
 
@@ -73,7 +73,7 @@ a:hover {
 
 .btn-primary {
     background-color: #16a34a;
-    color: white;
+    color: rgb(15, 0, 0);
 }
 
 .btn-primary:hover {

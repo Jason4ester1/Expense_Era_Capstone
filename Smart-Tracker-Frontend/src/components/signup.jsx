@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { User, Mail, Lock, Eye, EyeOff } from 'lucide-react'
+import { Button } from '@nextui-org/react'
 
 const Input = ({ icon: Icon, ...props }) => (
   <div className="relative">
@@ -12,13 +13,13 @@ const Input = ({ icon: Icon, ...props }) => (
   </div>
 )
 
-const Button = ({ children, className, ...props }) => (
-  <button
+const CustomButton = ({ children, className, ...props }) => (
+  <NextUIButton
     className={`w-full px-4 py-2 text-white bg-green-600 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${className}`}
     {...props}
   >
     {children}
-  </button>
+  </NextUIButton>
 )
 
 export default function Signup() {
@@ -36,15 +37,15 @@ export default function Signup() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-green-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-gray-450 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-green-900">Create your account</h2>
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-black">Create your account</h2>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="rounded-md shadow-sm -space-y-px">
             <div className="mb-4">
-              <label htmlFor="name" className="block text-sm font-medium text-green-700 mb-1">
+              <label htmlFor="name" className="block text-sm font-medium text-black mb-1">
                 Full Name
               </label>
               <Input
@@ -76,7 +77,7 @@ export default function Signup() {
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="password" className="block text-sm font-medium text-green-700 mb-1">
+              <label htmlFor="password" className="block text-sm font-medium text-black mb-1">
                 Password
               </label>
               <div className="relative">
@@ -128,7 +129,7 @@ export default function Signup() {
           </div>
 
           <div>
-            <Button type="submit">Sign up</Button>
+            <Button className='bg-green-600' type="submit">Sign up</Button>
           </div>
         </form>
         <div className="text-center">
