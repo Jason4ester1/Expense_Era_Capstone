@@ -50,7 +50,7 @@ const BudgetGraph = () => {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-center mb-4">Monthly Tracking</h2>
+      <h2 className="text-3xl font-bold text-black mb-6 bg-green-100 p-4 rounded-lg shadow-md bg-opacity-80 text-center ">Monthly Tracking</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -81,26 +81,28 @@ const BudgetGraph = () => {
         />
         <button  className="bg-green-400 text-black border-2 border-black rounded-md p-2" type="submit">Add Data</button>
       </form>
-      <ResponsiveContainer width="100%" height={400}>
-        <LineChart
-          data={data}
-          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-        >
-          <CartesianGrid strokeDasharray="3 3" stroke="black" />
-          <XAxis dataKey="month" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line
-            type="monotone"
-            dataKey="income"
-            stroke="#AAFF00"
-
-            activeDot={{ r: 8 }}
-          />
-          <Line type="monotone" dataKey="expenses" stroke="black" />
-        </LineChart>
-      </ResponsiveContainer>
+      
+      <div style={{ backgroundColor: '#8AFF8A', padding: '20px', borderRadius: '10px',opacity:0.8 }}>
+        <ResponsiveContainer width="100%" height={400}>
+          <LineChart
+            data={data}
+            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" stroke="black" />
+            <XAxis dataKey="month" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Line
+              type="monotone"
+              dataKey="income"
+              stroke="white"
+              activeDot={{ r: 8 }}
+            />
+            <Line type="monotone" dataKey="expenses" stroke="black" />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 };

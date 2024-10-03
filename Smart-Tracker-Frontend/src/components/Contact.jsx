@@ -32,7 +32,7 @@ export default function Contact() {
           <Input type="email" placeholder="Your Email" className="w-full" />
           <Input type="text" placeholder="Subject" className="w-full" />
           <Textarea placeholder="Your Message" className="w-full" rows={4} />
-          <div className="flex justify-center mt">
+          <div className="flex justify-center ">
             <Button type="submit" className="bg-green-100 hover:bg-green-700 text-black rounded-lg shadow-md bg-opacity-80">
               Send Message
             </Button>
