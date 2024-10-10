@@ -30,7 +30,7 @@ function Layout() {
       <nav className="bg-green-200 text-black p-4 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
-            <img src="logo for project.jpg"
+            <img src="/pictures/logo for project.jpg"
             alt="Expense Era Logo"
             className="h-20 w-20 mr-2"
             Link= "/home"

@@ -9,7 +9,7 @@ export default function About() {
       <div className="max-w-3xl mx-auto mt-3">
         <h1 className="text-3xl font-bold text-black mb-6 bg-green-100 p-4 rounded-lg shadow-md bg-opacity-80 text-center">About ExpenseEra</h1>
         <img
-          src="project pic.jpg"
+          src="/pictures/project pic.jpg"
           alt="Team working on finances"
           width={600}
           height={300}

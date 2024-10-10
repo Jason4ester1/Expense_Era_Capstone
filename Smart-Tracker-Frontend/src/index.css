@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    background-image: url(../public/4d42b032-28de-4232-bc56-529fd5e4d4e9.jpg);
+    background-image: url(../public/pictures/4d42b032-28de-4232-bc56-529fd5e4d4e9.jpg);
     background-size: cover;
     background-color: #2723234b; /* Light green background */
     margin: 0;

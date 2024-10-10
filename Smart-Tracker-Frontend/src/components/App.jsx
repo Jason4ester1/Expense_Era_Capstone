@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./layout"; // Import your Layout component
-import Home from "./Home"; // Example component for Home
+import Home from "./home"; // Example component for Home
 import About from "./About"; // Example component for About
 import Services from "./services"; // Example component for Services
 import Contact from "./Contact"; // Example component for Contact
